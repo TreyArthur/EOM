@@ -1,0 +1,61 @@
+<?xml version="1.0" standalone="no"?>
+
+<initialConditions>
+
+ <ic name="Straight and Level">
+  <data name="grossWeight" units="lbf">20500.0</data>
+  <data name="bodyXXMomentOfInertia" units="slugf2">9496.0</data>
+  <data name="bodyYYMomentOfInertia" units="slugf2">55814.0</data>
+  <data name="bodyZZMomentOfInertia" units="slugf2">63100.0</data>
+  <data name="bodyXYMomentOfInertia" units="slugf2">0.0</data>
+  <data name="bodyXZMomentOfInertia" units="slugf2">982.0</data>
+  <data name="bodyYZMomentOfInertia" units="slugf2">0.0</data>
+
+  <data name="latitude" units="d">37.123456</data>
+  <data name="altitude" units="f">10000</data>
+  <data name="referenceWingArea" units="f2">300.0</data>
+
+  <data name="trueAirspeed" units="fs-1">300.0</data>
+  <data name="angleOfAttack" units="d">5.0</data>
+  <data name="angleOfSideslip" units="d">0.0</data>
+  <data name="rollEulerAngle" units="d">0.0</data>
+  <data name="pitchEulerAngle" units="d">0.0</data>
+  <data name="yawEulerAngle" units="d">0.0</data>
+  <data name="rollBodyRate" units="rs-1">0.0</data>
+  <data name="pitchBodyRate" units="rs-1">0.0</data>
+  <data name="yawBodyRate" units="rs-1">0.0</data>
+  <data name="elevatorDeflection" units="d">0.0</data>
+  <data name="aileronDeflection" units="d">0.0</data>
+  <data name="rudderDeflection" units="d">0.0</data>
+  <data name="XBodyPositionOfCG" units="fracMAC">0.25</data>
+ </ic>
+
+ <ic name="Positive sideslip">
+  <data name="grossWeight_lbf" units="lbf">20500.0</data>
+  <data name="bodyXXMomentOfInertia_slugf2" units="slugf2">9496.0</data>
+  <data name="bodyYYMomentOfInertia_slugf2" units="slugf2">55814.0</data>
+  <data name="bodyZZMomentOfInertia_slugf2" units="slugf2">63100.0</data>
+  <data name="bodyXYMomentOfInertia" units="slugf2">0.0</data>
+  <data name="bodyXZMomentOfInertia" units="slugf2">982.0</data>
+  <data name="bodyYZMomentOfInertia" units="slugf2">0.0</data>
+
+  <data name="latitude" units="d">37.123456</data>
+  <data name="altitude" units="f">10000</data>
+  <data name="referenceWingArea_f2" units="f2">300.0</data>
+
+  <data name="trueAirspeed">300.0</data>
+  <data name="angleOfAttack" units="d">5.0</data>
+  <data name="angleOfSideslip" units="d">2.34</data>
+  <data name="rollEulerAngle" units="d">0.0</data>
+  <data name="pitchEulerAngle" units="d">0.0</data>
+  <data name="yawEulerAngle" units="d">0.0</data>
+  <data name="rollBodyRate" units="rs-1">0.0</data>
+  <data name="pitchBodyRate" units="rs-1">0.0</data>
+  <data name="yawBodyRate" units="rs-1">0.0</data>
+  <data name="elevatorDeflection" units="d">0.0</data>
+  <data name="aileronDeflection" units="d">0.0</data>
+  <data name="rudderDeflection" units="d">0.0</data>
+  <data name="XBodyPositionOfCG" units="fracMAC">0.25</data>
+ </ic>
+
+</initialConditions>
