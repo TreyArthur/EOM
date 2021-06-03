@@ -6,6 +6,11 @@ and then runs a simulation based on the equations of motion.  The results of
 the simulation are then compared to 
 [NESC check cases](https://nescacademy.nasa.gov/flightsim/)
 
+To use the this notebook, you will need:
+1. [Python 3](https://www.python.org/)
+2. [Matplotlib](https://matplotlib.org/)
+3. [Jupyter](https://jupyter.org/)
+
 This notebook is free software and is licensed under the terms of the 'GNU
 General Public License version 3' (GPLv3).
 
