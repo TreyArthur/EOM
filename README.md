@@ -1,5 +1,5 @@
-Jupyter Notebook on the Equations of Motion README
-==================================================
+Jupyter Notebook on the Equations of Motion
+===========================================
 
 This notebook reads in [DAVE-ML](https://daveml.org/) models, initial conditions
 and then runs a simulation based on the equations of motion.  The results of 
