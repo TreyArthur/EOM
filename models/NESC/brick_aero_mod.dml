@@ -66,19 +66,16 @@
 
   <variableDef name="referenceWingArea" varID="SWING" units="ft2" initialValue="0.22222">
     <description>Reference area of brick aero model (assumed area is 8" by 4")</description>
-    <isOutput/>
     <isStdAIAA/>
   </variableDef>
 
   <variableDef name="referenceWingSpan" varID="BSPAN" units="ft" initialValue="0.33333">
     <description>Width of brick model (4"), used as reference lateral length</description>
-    <isOutput/>
     <isStdAIAA/>
   </variableDef>
 
   <variableDef name="referenceWingChord" varID="CBAR" units="ft" initialValue="0.66667">
     <description>Length of brick model (8"), used as reference longitudinal length</description>
-    <isOutput/>
     <isStdAIAA/>
   </variableDef>
 
@@ -300,8 +297,8 @@
         <signal>
           <signalName>trueAirspeed</signalName>
           <varID>VRW</varID>
-          <signalValue>3.048</signalValue>
-          <signalUnits>m_s</signalUnits>
+          <signalValue>10.0</signalValue>
+          <signalUnits>ft_s</signalUnits>
         </signal>
         <signal>
           <signalName>bodyAngularRate_Roll</signalName>
@@ -329,23 +326,23 @@
         <signal>
           <signalName>referenceWingArea</signalName>
           <varID>SWING</varID>
-          <signalValue>0.0206449</signalValue>
-          <signalUnits>m2</signalUnits>
-          <tol>1e-6</tol>
+          <signalValue>0.22222</signalValue>
+          <signalUnits>ft2</signalUnits>
+          <tol>1e-5</tol>
         </signal>
         <signal>
           <signalName>referenceWingSpan</signalName>
           <varID>BSPAN</varID>
-          <signalValue>0.101598984</signalValue>
-          <signalUnits>m</signalUnits>
-          <tol>1e-8</tol>
+          <signalValue>0.33333</signalValue>
+          <signalUnits>ft</signalUnits>
+          <tol>1e-5</tol>
         </signal>
         <signal>
           <signalName>referenceWingChord</signalName>
           <varID>CBAR</varID>
-          <signalValue>0.203201016</signalValue>
-          <signalUnits>m</signalUnits>
-          <tol>1e-8</tol>
+          <signalValue>0.66667</signalValue>
+          <signalUnits>ft</signalUnits>
+          <tol>1e-5</tol>
         </signal>
         <signal>
           <signalName>roll damping from roll rate</signalName>

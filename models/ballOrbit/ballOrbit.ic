@@ -14,21 +14,21 @@
   <data name="bodyXZMomentOfInertia" units="kgm2">0.0</data>
   <data name="bodyYZMomentOfInertia" units="kgm2">0.0</data>
 
-  <data name="latitude" units="d">0.0</data>
-  <data name="longitude" units="d">0.0</data>
+  <data name="latitude" units="rad">0.0</data>
+  <data name="longitude" units="rad">0.0</data>
   <data name="altitude" units="km">200.0</data>
   <data name="referenceWingArea" units="m2">0.031415</data>
 
-  <data name="trueAirspeed" units="kms-1">8.0</data>
-  <data name="angleOfAttack" units="d">0.0</data>
-  <data name="angleOfSideslip" units="d">0.0</data>
-  <data name="rollEulerAngle" units="d">0.0</data>
-  <data name="pitchEulerAngle" units="d">0.0</data>
-  <data name="yawEulerAngle" units="d">90.0</data>
-  <data name="rollBodyRate" units="rs-1">0.0</data>
-  <data name="pitchBodyRate" units="ds-1">0.0</data>
-  <data name="yawBodyRate" units="ds-1">0.0</data>
-  <data name="XBodyPositionOfCG" units="fracMAC">0.25</data>
+  <data name="trueAirspeed" units="km_s">8.0</data>
+  <data name="angleOfAttack" units="rad">0.0</data>
+  <data name="angleOfSideslip" units="rad">0.0</data>
+  <data name="rollEulerAngle" units="rad">0.0</data>
+  <data name="pitchEulerAngle" units="rad">0.0</data>
+  <data name="yawEulerAngle" units="deg">90.0</data>
+  <data name="rollBodyRate" units="rad_s">0.0</data>
+  <data name="pitchBodyRate" units="rad_s">0.0</data>
+  <data name="yawBodyRate" units="rad_s">0.0</data>
+  <data name="XBodyPositionOfCG" units="nd">0.25</data>
  </ic>
 
 </initialConditions>

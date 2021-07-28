@@ -16,14 +16,6 @@
   <!--      Constants     -->
   <!-- ================== -->
 
-  <variableDef name="XBodyPositionOfMRC" varID="xcgr" units="fracMAC" initialValue="0.1">
-    <description> 
-      Default location of center of gravity relative to wing leading
-      edge, expressed as a fraction of aerodynamic chord length.
-    </description>
-    <isStdAIAA/>
-  </variableDef>
-
   <variableDef name="referenceWingChord" varID="cbar" units="m" initialValue="0.2">
     <description> Length of aerodynamic chord, m </description>
     <isStdAIAA/>
@@ -38,7 +30,7 @@
   <!--  Output variables  -->
   <!-- ================== -->
 
-  <variableDef name="aeroXBodyForceCoefficient" varID="cx" units="" sign="FWD" initialValue="0.0">
+  <variableDef name="aeroBodyForceCoefficient_X" varID="cx" units="nd" sign="FWD" initialValue="0.0">
     <description> 
       Total coefficient of force along the body X-axis.
     </description>
@@ -46,7 +38,7 @@
     <isStdAIAA/>
   </variableDef>
 
-  <variableDef name="aeroYBodyForceCoefficient" varID="cy" units="" sign="RIGHT" initialValue="0.0">
+  <variableDef name="aeroBodyForceCoefficient_Y" varID="cy" units="nd" sign="RIGHT" initialValue="0.0">
     <description> 
       Total coefficient of force along the body Y-axis
     </description>
@@ -54,7 +46,7 @@
     <isStdAIAA/>
   </variableDef>
 
-  <variableDef name="aeroZBodyForceCoefficient" varID="cz" units="" sign="DOWN" initialValue="0.0">
+  <variableDef name="aeroBodyForceCoefficient_Z" varID="cz" units="nd" sign="DOWN" initialValue="0.0">
     <description> 
       Total coefficient of force along the body Z-axis.
     </description>
@@ -62,7 +54,7 @@
     <isStdAIAA/>
   </variableDef>
 
-  <variableDef name="aeroRollBodyMomentCoefficient" varID="cl" units="" sign="RWD" initialValue="0.0">
+  <variableDef name="aeroBodyMomentCoefficient_Roll" varID="cl" units="nd" sign="RWD" initialValue="0.0">
     <description> 
       Total coefficient of moment around the body X-axis (rolling
       moment)
@@ -71,7 +63,7 @@
     <isStdAIAA/>
   </variableDef>
 
-  <variableDef name="aeroPitchBodyMomentCoefficient" varID="cm" units="" sign="ANU" initialValue="0.0">
+  <variableDef name="aeroBodyMomentCoefficient_Pitch" varID="cm" units="nd" sign="ANU" initialValue="0.0">
     <description> 
       Total coefficient of moment around the body Y-axis (pitching
       moment)
@@ -80,7 +72,7 @@
     <isStdAIAA/>
   </variableDef>
 
-  <variableDef name="aeroYawBodyMomentCoefficient" varID="cn" units="" sign="ANR" initialValue="0.0">
+  <variableDef name="aeroBodyMomentCoefficient_Yaw" varID="cn" units="nd" sign="ANR" initialValue="0.0">
     <description> 
       Total coefficient of moment around the body Z-axis (yawing
       moment)
@@ -149,6 +141,4 @@
       </checkOutputs>
     </staticShot>
   </checkData>
-
-
 </DAVEfunc>

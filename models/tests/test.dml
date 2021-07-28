@@ -13,23 +13,23 @@
   <!--      Constants     -->
   <!-- ================== -->
 
-  <variableDef name="rtd" varID="rtd" units="deg/rad" initialValue="57.29577951">
+  <variableDef name="rtd" varID="rtd" units="deg_rad" initialValue="57.29577951">
     <description> Conversion constant from radians to degrees </description>
   </variableDef>
 
-  <variableDef name="angleOfAttack" varID="alpha" units="none">
+  <variableDef name="angleOfAttack" varID="alpha" units="nd">
   </variableDef>
 
-  <variableDef name="beta" varID="beta" units="none" initialValue="5.0">
+  <variableDef name="beta" varID="beta" units="deg" initialValue="5.0">
   </variableDef>
 
-  <variableDef name="Avariable" varID="a" units="none" initialValue="2.0">
+  <variableDef name="Avariable" varID="a" units="nd" initialValue="2.0">
   </variableDef>
 
-  <variableDef name="Bvariable" varID="b" units="none">
+  <variableDef name="Bvariable" varID="b" units="nd">
   </variableDef>
 
-  <variableDef name="cnp" varID="cnp" units="none">
+  <variableDef name="cnp" varID="cnp" units="nd">
   </variableDef>
 
   <variableDef name="dtr" varID="dtr" units="r_d">
@@ -52,7 +52,7 @@
   <!-- ================== -->
 
 <!-- Alpha in radians, for checkcases (mod D) -->
-  <variableDef name="alpr" varID="ALPR" units="r">
+  <variableDef name="alpr" varID="ALPR" units="rad">
     <description>Angle of attack in radians</description>
     <calculation>
       <python>{alpha} * {dtr}</python>
@@ -66,7 +66,7 @@
     </calculation>
   </variableDef>
 
-  <variableDef name="dummy" varID="dummy" units="">
+  <variableDef name="dummy" varID="dummy" units="nd">
     <description> A test: TREY </description>
     <calculation>
       <python>10 * (25 - 15) + 8/2 + 9 * 9 + 3 + 2</python>
@@ -105,7 +105,7 @@
     </calculation>
   </variableDef>
 
-  <variableDef name="Xvar" varID="x" units="">
+  <variableDef name="Xvar" varID="x" units="nd">
     <description> A test: TREY </description>
     <calculation>
       <python>5.0 ** {a}</python>
@@ -119,7 +119,7 @@
     </calculation>
   </variableDef>
 
-  <variableDef name="y" varID="y" units="">
+  <variableDef name="y" varID="y" units="nd">
     <description> A test: TREY </description>
     <calculation>
       <python>{cnp} + 0.0</python>
@@ -133,14 +133,14 @@
     </calculation>
   </variableDef>
 
-  <variableDef name="Cz1" varID="cz1" units="" sign="down">
+  <variableDef name="Cz1" varID="cz1" units="nd" sign="down">
     <description>
       Coefficient of force in the Z-body direction, modified from
       basic CZ0 to include effects of sideslip and elevator
       deflection.
     </description>
     <calculation>
-      <python>10.0</python>
+      <python>{czt}*(1.-({beta}/{rtd})**2)-0.19*{del}</python>
       <math>                         <!-- cz = czt*(1.-(beta/rtd)^2)-0.19*del   -->
         <apply>                      <!--      czt*(1.-(beta/rtd)^2)-0.19*del   -->
           <plus/>
@@ -174,10 +174,11 @@
     </calculation>
   </variableDef>
 
-  <variableDef name="cnt" varID="cnt" units="" sign="nose right">
+  <variableDef name="cnt" varID="cnt" units="nd" sign="nose right">
     <description> Basic coefficient of moment around the Z-body direction (yaw) (+RWD) </description>
     <calculation>
-      <python>20.0</python>
+      <python>-10 if {beta} &lt; 0 else 10</python>
+      <!--<python>20</python>-->
       <math>
         <apply>
           <piecewise>
@@ -208,7 +209,7 @@
   </variableDef>
 
 <!-- LIMITED ALPHA -->
-  <variableDef name="Limited_angle_of_attack" varID="ALP" units="d" sign="anu">
+  <variableDef name="Limited_angle_of_attack" varID="ALP" units="deg" sign="anu">
     <description>
         Instantaneous angle of attack, limited as a function of Mach
         number, degrees.
@@ -219,8 +220,7 @@
         output current value of ALP_UNLIM.
     </description>
     <calculation>
-      <python>30.0</python>
-      <!--<python>if {ALP_UNLIM} < -2:\n\tALP = -2</python>-->
+      <python>-2.0 if {ALP_UNLIM} &lt; -2 else {ALP_MAX_LIM} if {ALP_UNLIM} > {ALP_MAX_LIM} else {ALP_UNLIM}</python>
       <math>
         <apply>
           <piecewise>
@@ -249,7 +249,7 @@
     </calculation>
   </variableDef>
 
-  <variableDef name="sinTest" varID="sinTest" units="" sign="none">
+  <variableDef name="sinTest" varID="sinTest" units="nd" sign="none">
     <description> Test the sin function: sin(45 deg)  </description>
     <calculation>
       <python>math.sin(0.5235987756)</python>
@@ -266,7 +266,7 @@
   <!--  Breakpoint values -->
   <!-- ================== -->
 
-  <breakpointDef name="alpha" bpID="ALPHA1" units="d">
+  <breakpointDef name="alpha" bpID="ALPHA1" units="deg">
     <description> Alpha breakpoints for basic and damping aero tables </description>
     <bpVals> -10., -5., 0., 5., 10., 15., 20., 25., 30., 35., 40., 45. </bpVals>
   </breakpointDef>
@@ -316,6 +316,23 @@
           <signalName>ALP_UNLIM</signalName>
           <varID>ALP_UNLIM</varID>
           <signalValue>-1.0</signalValue>
+        </signal>
+        <signal>
+          <signalName>angleOfSideslip</signalName>
+          <varID>beta</varID>
+          <signalValue>5.0</signalValue>
+        </signal>
+        <signal>
+          <signalName>elevatorDeflection</signalName>
+          <varID>del</varID>
+          <signalUnits>d</signalUnits>
+          <signalValue> 0.000</signalValue>
+        </signal>
+        <signal>
+          <signalName>czt</signalName>
+          <varID>czt</varID>
+          <signalUnits>d</signalUnits>
+          <signalValue>-49.5</signalValue>
         </signal>
       </checkInputs>
 
@@ -378,7 +395,7 @@
         <signal>
           <signalName>cz1</signalName>
           <varID>cz1</varID>
-          <signalValue>-49.5</signalValue>
+          <signalValue>-49.123036</signalValue>
           <tol>0.000001</tol>
         </signal>
         <signal>

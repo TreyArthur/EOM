@@ -9,13 +9,13 @@
     <description> A test checking 1D data tables </description>
   </fileHeader>
 
-  <variableDef name="angleOfAttack" varID="alpha" units="d">
+  <variableDef name="angleOfAttack" varID="alpha" units="deg">
   </variableDef>
 
-  <variableDef name="Cnp" varID="cnp" units="none">
+  <variableDef name="Cnp" varID="cnp" units="nd">
   </variableDef>
 
-  <breakpointDef name="alpha" bpID="ALPHA1" units="d">
+  <breakpointDef name="alpha" bpID="ALPHA1" units="deg">
     <description> Alpha breakpoints for basic and damping aero tables </description>
     <bpVals> -10., -5., 0., 5., 10., 15., 20., 25., 30., 35., 40., 45. </bpVals>
   </breakpointDef>

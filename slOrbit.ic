@@ -3,56 +3,56 @@
 <initialConditions>
 
  <ic name="Orbiting Brick - Stephens and Lewis pg 43">
-  <data name="bodyXXMomentOfInertia" units="slugf2">0.001894220</data>
-  <data name="bodyYYMomentOfInertia" units="slugf2">0.006211019</data>
-  <data name="bodyZZMomentOfInertia" units="slugf2">0.007194665</data>
-  <data name="bodyXYMomentOfInertia" units="slugf2">0.0</data>
-  <data name="bodyXZMomentOfInertia" units="slugf2">0.0</data>
-  <data name="bodyYZMomentOfInertia" units="slugf2">0.0</data>
+  <data name="bodyXXMomentOfInertia" units="slugft2">0.001894220</data>
+  <data name="bodyYYMomentOfInertia" units="slugft2">0.006211019</data>
+  <data name="bodyZZMomentOfInertia" units="slugft2">0.007194665</data>
+  <data name="bodyXYMomentOfInertia" units="slugft2">0.0</data>
+  <data name="bodyXZMomentOfInertia" units="slugft2">0.0</data>
+  <data name="bodyYZMomentOfInertia" units="slugft2">0.0</data>
 
-  <data name="latitude" units="d">0.0</data>
-  <data name="longitude" units="d">0.0</data>
+  <data name="latitude" units="rad">0.0</data>
+  <data name="longitude" units="rad">0.0</data>
   <data name="altitude" units="m">100000.0</data>
 
   <data name="referenceWingSpan" units="m">5.0</data>
   <data name="referenceWingChord" units="m">8.0</data>
 
-  <data name="rollEulerAngle" units="r">0.0</data>
-  <data name="pitchEulerAngle" units="r">0.0</data>
-  <data name="yawEulerAngle" units="r">0.0</data>
-  <data name="rollBodyRate" units="d_s">0.0</data>
-  <data name="pitchBodyRate" units="d_s">0.0</data>
-  <data name="yawBodyRate" units="d_s">0.0</data>
+  <data name="rollEulerAngle" units="rad">0.0</data>
+  <data name="pitchEulerAngle" units="rad">0.0</data>
+  <data name="yawEulerAngle" units="rad">0.0</data>
+  <data name="rollBodyRate" units="deg_s">0.0</data>
+  <data name="pitchBodyRate" units="deg_s">0.0</data>
+  <data name="yawBodyRate" units="deg_s">0.0</data>
 
   <data name="trueAirspeed" units="m_s">9000.0</data>
-  <data name="angleOfAttack" units="r">0.0</data>
-  <data name="angleOfSideslip" units="r">0.0</data>
+  <data name="angleOfAttack" units="rad">0.0</data>
+  <data name="angleOfSideslip" units="rad">0.0</data>
 
   <data name="grossWeight" units="lbf">5.0</data>
  </ic>
 
  <ic name="Tumbling Brick - Atmos-03">
-  <data name="bodyXXMomentOfInertia" units="slugf2">0.001894220</data>
-  <data name="bodyYYMomentOfInertia" units="slugf2">0.006211019</data>
-  <data name="bodyZZMomentOfInertia" units="slugf2">0.007194665</data>
-  <data name="bodyXYMomentOfInertia" units="slugf2">0.0</data>
-  <data name="bodyXZMomentOfInertia" units="slugf2">0.0</data>
-  <data name="bodyYZMomentOfInertia" units="slugf2">0.0</data>
+  <data name="bodyXXMomentOfInertia" units="slugft2">0.001894220</data>
+  <data name="bodyYYMomentOfInertia" units="slugft2">0.006211019</data>
+  <data name="bodyZZMomentOfInertia" units="slugft2">0.007194665</data>
+  <data name="bodyXYMomentOfInertia" units="slugft2">0.0</data>
+  <data name="bodyXZMomentOfInertia" units="slugft2">0.0</data>
+  <data name="bodyYZMomentOfInertia" units="slugft2">0.0</data>
 
-  <data name="latitude" units="d">0.0</data>
-  <data name="longitude" units="d">0.0</data>
-  <data name="altitude" units="f">30000.0</data>
+  <data name="latitude" units="rad">0.0</data>
+  <data name="longitude" units="rad">0.0</data>
+  <data name="altitude" units="ft">30000.0</data>
 
-  <data name="rollEulerAngle" units="r">0.0</data>
-  <data name="pitchEulerAngle" units="r">0.0</data>
-  <data name="yawEulerAngle" units="r">0.0</data>
-  <data name="rollBodyRate" units="ds-1">10.0</data>
-  <data name="pitchBodyRate" units="ds-1">20.0</data>
-  <data name="yawBodyRate" units="ds-1">30.0</data>
+  <data name="rollEulerAngle" units="rad">0.0</data>
+  <data name="pitchEulerAngle" units="rad">0.0</data>
+  <data name="yawEulerAngle" units="rad">0.0</data>
+  <data name="rollBodyRate" units="deg_s">10.0</data>
+  <data name="pitchBodyRate" units="deg_s">20.0</data>
+  <data name="yawBodyRate" units="deg_s">30.0</data>
 
-  <data name="trueAirspeed" units="fs-1">0.0</data>
-  <data name="angleOfAttack" units="r">0.0</data>
-  <data name="angleOfSideslip" units="r">0.0</data>
+  <data name="trueAirspeed" units="ft_s">0.0</data>
+  <data name="angleOfAttack" units="rad">0.0</data>
+  <data name="angleOfSideslip" units="rad">0.0</data>
 
   <data name="grossWeight" units="lbf">5.0</data>
  </ic>

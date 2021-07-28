@@ -1,0 +1,87 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE DAVEfunc PUBLIC "-//AIAA//DTD for Flight Dynamic Models - Functions 2.0//EN"  
+          "http://www.daveml.org/DTDs/2p0/DAVEfunc.dtd">
+<DAVEfunc xmlns="http://daveml.org/2010/DAVEML">
+
+  <!--                          =================                          -->
+  <!-- =========================   FILE HEADER   ========================= -->
+  <!--                          =================                          -->
+
+
+  <fileHeader name="Zero Aero Output">
+
+    <author name="Trey Arthur" org="NASA Langley Research Center" email="trey.arthur@nasa.gov">
+      <address>MS 52 NASA, Hampton, VA 23681</address>
+    </author>
+
+    <creationDate date="2021-07-21"/>
+
+    <fileVersion>Initial version</fileVersion>
+
+    <description>
+      A simple constant zero output model
+    </description>
+
+  </fileHeader>
+
+
+  <!--                          ==========================                          -->
+  <!-- =========================   VARIABLE DEFINITIONS   ========================= -->
+  <!--                          ==========================                          -->
+
+
+  <!-- ================== -->
+  <!--       Outputs      -->
+  <!-- ================== -->
+
+
+  <variableDef name="aeroBodyForceCoefficient_X" varID="CX" units="kgm2" initialValue="0.0">
+    <description>
+      Force coefficient along the body X axis
+    </description>
+    <isOutput/>
+    <isStdAIAA/>
+  </variableDef>
+
+  <variableDef name="aeroBodyForceCoefficient_Y" varID="CY" units="kgm2" initialValue="0.0">
+    <description>
+      Force coefficient along the body Y axis
+    </description>
+    <isOutput/>
+    <isStdAIAA/>
+  </variableDef>
+
+  <variableDef name="aeroBodyForceCoefficient_Z" varID="CZ" units="kgm2" initialValue="0.0">
+    <description>
+      Force coefficient along the body Z axis
+    </description>
+    <isOutput/>
+    <isStdAIAA/>
+  </variableDef>
+  
+
+  <variableDef name="aeroBodyMomentCoefficient_Roll" varID="CLL" units="kgm2" initialValue="0.0">
+    <description>
+      Moment coefficient about the body X axis
+    </description>
+    <isOutput/>
+    <isStdAIAA/>
+  </variableDef>
+
+  <variableDef name="aeroBodyMomentCoefficient_Pitch" varID="CLM" units="kgm2" initialValue="0.0">
+    <description>
+      Moment coefficient about the body Y axis
+    </description>
+    <isOutput/>
+    <isStdAIAA/>
+  </variableDef>
+
+  <variableDef name="aeroBodyMomentCoefficient_Yaw" varID="CLN" units="kgm2" initialValue="0.0">
+    <description>
+      Moment coefficient about the body Z axis
+    </description>
+    <isOutput/>
+    <isStdAIAA/>
+  </variableDef>
+  
+</DAVEfunc>
